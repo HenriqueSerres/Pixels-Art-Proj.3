@@ -36,9 +36,35 @@ function changePixelColor() {
 changePixelColor();
 
 //exercício 7
+let color;
+let colorPixelChoice;
+let colorSelected;
 const paletteColor = document.querySelector('#color-palette')
+
 paletteColor.addEventListener('click', function(event){
-  let colorPixelChoice = document.querySelector('.selected');
-  colorPixelChoice.classList.remove('selected');
-  event.target.classList.add('selected');
+  let choiceColor = event.target;  
+   colorPixelChoice = document.querySelector('.selected');
+   colorPixelChoice.classList.remove('selected');   
+   colorSelected = choiceColor.classList.add('selected');
+   let choiceColorChange = document.querySelector('.selected')  
+   color = choiceColorChange.id;
 });
+
+let pixelFamily = document.querySelectorAll('.pixel');
+
+
+for (let index = 0; index < pixelFamily.length; index++) {
+  
+  pixelFamily[index].addEventListener('click', function(){
+    pixelFamily[index].style.backgroundColor = color;
+  })
+  
+}
+//exercício 8
+function pixelPainting(event){
+  const colorPaint = document.querySelector(event.target.className);
+  
+  if (colorPaint === paletteColor) {
+    colorPaint.i
+  }
+}
