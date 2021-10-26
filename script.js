@@ -22,18 +22,23 @@ const yellowPixel = document.querySelector("#yellow");
 const redPixel = document.querySelector("#red");
 
 function changePixelColor() {
- const startBlack = document.querySelectorAll("#pixel-board");
- startBlack.addEventListener('click', function(event) {
-  if (event.target === whitePixel) {
-    event.target = blackPixel;
-  } else {
-    event.target = whitePixel;
-  }
-});
+  blackPixel.classList.add('selected');
+
+//   let startBlack = document.querySelectorAll("#color-palette");
+//   startBlack.addEventListener('click', function(event) {
+//  if (event.target === whitePixel) {
+//    startBlack = blackPixel;
+//   } else {
+//     startBlack = whitePixel;
+//   }
+// });
 }
 changePixelColor();
 
-// exercício 7
-//function changePixelColor(event) {
-//   let colorPixelChoice = document.querySelector
-// }
+//exercício 7
+const paletteColor = document.querySelector('#color-palette')
+paletteColor.addEventListener('click', function(event){
+  let colorPixelChoice = document.querySelector('.selected');
+  colorPixelChoice.classList.remove('selected');
+  event.target.classList.add('selected');
+});
