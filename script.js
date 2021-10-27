@@ -43,7 +43,7 @@ paletteColor.addEventListener('click', function(event){
    color = choiceColorChange.id;
 });
 
-let pixelFamily = document.querySelectorAll('.pixel');
+const pixelFamily = document.querySelectorAll('.pixel');
 
 
 for (let index = 0; index < pixelFamily.length; index++) {
@@ -53,11 +53,13 @@ for (let index = 0; index < pixelFamily.length; index++) {
   })
   
 }
-//exercício 8
-// function pixelPainting(event){
-//   const colorPaint = document.querySelector(event.target.className);
-  
-//   if (colorPaint === paletteColor) {
-//     colorPaint.i
-//   }
-// }
+
+//ex - 9
+const buttonClean = document.querySelector('#clear-board');
+function cleanPixels(){
+  let pixels = document.querySelectorAll('.pixel');
+  for (let key of pixelFamily){
+    key.removeAttribute('style');
+  }
+}
+buttonClean.addEventListener('click', cleanPixels);
