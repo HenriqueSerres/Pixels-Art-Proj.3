@@ -63,3 +63,4 @@ function cleanPixels(){
   }
 }
 buttonClean.addEventListener('click', cleanPixels);
+// fim dos exercicios obrigatórios
