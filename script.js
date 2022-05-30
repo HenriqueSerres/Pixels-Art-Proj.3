@@ -48,7 +48,7 @@ const pixelFamily = document.querySelectorAll('.pixel');
 
 for (let index = 0; index < pixelFamily.length; index++) {
   
-  pixelFamily[index].addEventListener('click', function(){
+  pixelFamily[index].addEventListener('click', () => {
     pixelFamily[index].style.backgroundColor = color;
   })
   
@@ -56,8 +56,8 @@ for (let index = 0; index < pixelFamily.length; index++) {
 
 //ex - 9
 const buttonClean = document.querySelector('#clear-board');
-function cleanPixels(){
-  let pixels = document.querySelectorAll('.pixel');
+
+function cleanPixels(){  
   for (let key of pixelFamily){
     key.removeAttribute('style');
   }
